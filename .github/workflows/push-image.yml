@@ -38,7 +38,7 @@ jobs:
 
     - name: Create Builder Image
       run: |
-        pack builder create builder-buildpackless --config builder-buildpackless.toml
+        pack builder create builder --config builder.toml
 
     - name: Push To Dockerhub
       env:
@@ -52,11 +52,11 @@ jobs:
         registry_repo=$(echo "${{ github.repository }}" | sed 's/^.*\///')
 
         echo "${PAKETO_BUILDPACKS_DOCKERHUB_PASSWORD}" | docker login --username "${PAKETO_BUILDPACKS_DOCKERHUB_USERNAME}" --password-stdin
-        docker tag builder-buildpackless "${DOCKERHUB_ORG}/${registry_repo}-buildpackless:latest"
-        docker tag builder-buildpackless "${DOCKERHUB_ORG}/${registry_repo}-buildpackless:${{ steps.event.outputs.tag }}"
+        docker tag builder "${DOCKERHUB_ORG}/${registry_repo}:latest"
+        docker tag builder "${DOCKERHUB_ORG}/${registry_repo}:${{ steps.event.outputs.tag }}"
 
-        docker push "${DOCKERHUB_ORG}/${registry_repo}-buildpackless:latest"
-        docker push "${DOCKERHUB_ORG}/${registry_repo}-buildpackless:${{ steps.event.outputs.tag }}"
+        docker push "${DOCKERHUB_ORG}/${registry_repo}:latest"
+        docker push "${DOCKERHUB_ORG}/${registry_repo}:${{ steps.event.outputs.tag }}"
 
   failure:
     name: Alert on Failure
