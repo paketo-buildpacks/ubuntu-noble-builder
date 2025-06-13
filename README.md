@@ -10,7 +10,7 @@ your CNB platform of choice offers.
 For example, with the `pack` CLI, use `--buildpack` as follows:
 ```bash
 pack build dotnet-with-buildpackless-builder \
---buildpack index.docker.io/paketo-buildpacks/dotnet-core \
+--buildpack paketobuildpacks/dotnet-core \
 --builder paketobuildpacks/ubuntu-noble-builder-buildpackless:latest
 ```
 
