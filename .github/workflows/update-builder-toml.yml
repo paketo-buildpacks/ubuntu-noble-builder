@@ -24,13 +24,14 @@ jobs:
       uses: paketo-buildpacks/github-config/actions/builder/update@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        filename: "builder-buildpackless.toml"
 
     - name: Git commit
       id: commit
       uses: paketo-buildpacks/github-config/actions/pull-request/create-commit@main
       with:
         message: "Update builder.toml"
-        pathspec: "builder.toml"
+        pathspec: "builder-buildpackless.toml"
         keyid: ${{ secrets.PAKETO_BOT_GPG_SIGNING_KEY_ID }}
         key: ${{ secrets.PAKETO_BOT_GPG_SIGNING_KEY }}
 
