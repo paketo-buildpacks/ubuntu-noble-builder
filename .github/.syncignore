@@ -1,4 +1,4 @@
 CODEOWNERS
 dependabot.yml
-push-image.yml
-update-builder-toml.toml
+workflows/push-image.yml
+workflows/update-builder-toml.yml
