@@ -24,6 +24,7 @@ jobs:
       uses: paketo-buildpacks/github-config/actions/builder/update@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        filename: "builder-buildpackless.toml"
 
     - name: Git commit
       id: commit
