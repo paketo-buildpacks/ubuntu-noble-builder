@@ -1,6 +1,6 @@
 # Paketo Noble Buildpackless Builder
 
-## `paketobuildpacks/ubuntu-noble-builder:latest`
+## `paketobuildpacks/ubuntu-noble-builder-buildpackless:latest`
 
 This builder uses the [Paketo Noble Stack](https://github.com/paketo-buildpacks/ubuntu-noble-base-images) (an Ubuntu Noble
 base image) and contains **no buildpacks nor order groups**. To use this
