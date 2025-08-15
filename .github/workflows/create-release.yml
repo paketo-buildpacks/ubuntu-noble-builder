@@ -14,13 +14,13 @@ jobs:
     outputs:
       release_notes: ${{ steps.notes.outputs.body }}
     steps:
-    - name: Setup Go
-      uses: actions/setup-go@v3
-      with:
-        go-version: 'stable'
-
     - name: Checkout
       uses: actions/checkout@v4
+
+    - name: Setup Go
+      uses: actions/setup-go@v5
+      with:
+        go-version-file: go.mod
 
     - name: Get pack version
       id: pack-version
@@ -61,7 +61,7 @@ jobs:
     - name: Compare With Previous Release
       id: compare_previous_release
       run: |
-        if [ -z "$(git diff $(git describe --tags --abbrev=0) -- builder-buildpackless.toml)" ]
+        if [ -z "$(git diff $(git describe --tags --abbrev=0) -- builder.toml)" ]
         then
           echo "builder_changes=false" >> "$GITHUB_OUTPUT"
         else
@@ -71,7 +71,7 @@ jobs:
     - name: Publish Release
       id: publish
       if: ${{ steps.compare_previous_release.outputs.builder_changes == 'true' }}
-      uses: release-drafter/release-drafter@v5
+      uses: release-drafter/release-drafter@v6
       with:
         config-name: release-drafter-config.yml
         publish: true
