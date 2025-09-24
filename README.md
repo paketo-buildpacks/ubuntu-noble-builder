@@ -17,7 +17,7 @@ pack build dotnet-with-buildpackless-builder \
 To see which versions of build and run images and the lifecycle are contained
 within a given builder version, see the
 [Releases](https://github.com/paketo-buildpacks/ubuntu-noble-base-images/releases)
-on this repo. This information is also available in the `builder-buildpackless.toml`.
+on this repo. This information is also available in the `builder.toml`.
 
 For more information about this builder and how to use it, visit the [Paketo
 builder documentation](https://paketo.io/docs/builders/).  To learn about the

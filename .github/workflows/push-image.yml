@@ -60,7 +60,7 @@ jobs:
 
         # In order to publish multi-arch builders with pack, the builder MUST be published.
         # It cannot be created locally and then pushed
-        pack builder create "${DOCKERHUB_ORG}/${registry_repo}:${{ steps.event.outputs.tag }}" --config builder-buildpackless.toml --publish
+        pack builder create "${DOCKERHUB_ORG}/${registry_repo}:${{ steps.event.outputs.tag }}" --config builder.toml --publish
         crane copy "${DOCKERHUB_ORG}/${registry_repo}:${{ steps.event.outputs.tag }}" "${DOCKERHUB_ORG}/${registry_repo}:latest"
 
   failure:
