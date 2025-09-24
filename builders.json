@@ -1,0 +1,10 @@
+{
+  "builders": [
+    {
+      "name": "ubuntu-noble-builder-buildpackless",
+      "path": ".",
+      "container_repository": "ubuntu-noble-builder-buildpackless",
+      "test_runners": ["ubuntu-22.04"]
+    }
+  ]
+}
