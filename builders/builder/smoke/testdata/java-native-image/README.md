@@ -4,7 +4,7 @@
 
 ```bash
 pack build applications/native-image \
-  --builder paketobuildpacks/builder-jammy-base \
+  --builder paketobuildpacks/builder-noble-base \
   --env BP_NATIVE_IMAGE=true
 ```
 
