@@ -1,0 +1,53 @@
+description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java."
+
+[build]
+  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.31"
+
+[[buildpacks]]
+  uri = "docker://docker.io/paketobuildpacks/java-native-image:12.0.0"
+  version = "12.0.0"
+
+[[buildpacks]]
+  uri = "docker://docker.io/paketobuildpacks/java:19.0.0"
+  version = "19.0.0"
+
+[[buildpacks]]
+  uri = "docker://docker.io/paketobuildpacks/procfile:5.11.3"
+  version = "5.11.3"
+
+[lifecycle]
+  version = "0.20.14"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/java-native-image"
+    version = "12.0.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/java"
+    version = "19.0.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/procfile"
+    version = "5.11.3"
+
+[stack]
+  id = "io.buildpacks.stacks.noble"
+
+[run]
+
+ [[run.images]]
+    image = "docker.io/paketobuildpacks/ubuntu-noble-run:latest"
+
+[[targets]]
+  arch = "amd64"
+  os = "linux"
+
+[[targets]]
+  arch = "arm64"
+  os = "linux"
