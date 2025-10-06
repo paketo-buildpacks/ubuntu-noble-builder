@@ -2,9 +2,10 @@
   "builders": [
     {
       "name": "ubuntu-noble-builder-buildpackless",
-      "path": ".",
+      "path": "./buiders/builder-buildpackless",
       "container_repository": "ubuntu-noble-builder-buildpackless",
-      "test_runners": ["ubuntu-22.04"]
+      "test_runners": ["ubuntu-22.04", "ubuntu-22.04-arm"]
+    },
     }
   ]
 }
