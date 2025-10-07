@@ -18,7 +18,9 @@ var (
 	Builder string
 
 	config struct {
-		Procfile string `json:"procfile"`
+		Procfile  string `json:"procfile"`
+		GoDist    string `json:"go-dist"`
+		BuildPlan string `json:"build-plan"`
 	}
 )
 
@@ -42,6 +44,8 @@ func TestSmoke(t *testing.T) {
 	Expect(file.Close()).To(Succeed())
 
 	Expect(occam.NewDocker().Pull.Execute(config.Procfile))
+	Expect(occam.NewDocker().Pull.Execute(config.GoDist))
+	Expect(occam.NewDocker().Pull.Execute(config.BuildPlan))
 
 	suite := spec.New("Buildpackless Smoke", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("Procfile", testProcfile)
