@@ -40,9 +40,6 @@ func testProcfile(t *testing.T, context spec.G, it spec.S) {
 			var err error
 			name, err = occam.RandomName()
 			Expect(err).NotTo(HaveOccurred())
-
-			source, err = occam.Source(filepath.Join("testdata", "procfile"))
-			Expect(err).NotTo(HaveOccurred())
 		})
 
 		it.After(func() {
@@ -54,25 +51,30 @@ func testProcfile(t *testing.T, context spec.G, it spec.S) {
 
 		it("builds Procfile app successfully", func() {
 			var err error
+			source, err = occam.Source(filepath.Join("testdata", "procfile"))
+			Expect(err).NotTo(HaveOccurred())
+
 			var logs fmt.Stringer
 			image, logs, err = pack.Build.
 				WithPullPolicy("always").
 				WithBuilder(Builder).
 				WithBuildpacks(
+					config.GoDist,
 					config.Procfile,
+					config.BuildPlan,
 				).
 				Execute(name, source)
 			Expect(err).ToNot(HaveOccurred(), logs.String)
 
+			Expect(logs).To(ContainLines(ContainSubstring("Paketo Buildpack for Procfile")))
+
 			container, err = docker.Container.Run.
-				WithEnv(map[string]string{"PORT": "8080"}).
 				WithPublish("8080").
 				Execute(image.ID)
 			Expect(err).NotTo(HaveOccurred())
 
 			Eventually(container).Should(BeAvailable())
-
-			Expect(logs).To(ContainLines(ContainSubstring("Paketo Buildpack for Procfile")))
+			Eventually(container).Should(Serve(ContainSubstring("Hello World!")).OnPort(8080).WithEndpoint("/hello-world"))
 		})
 	})
 }
