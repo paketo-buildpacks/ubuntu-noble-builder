@@ -51,7 +51,7 @@ func testJavaNativeImage(t *testing.T, context spec.G, it spec.S) {
 
 		it("builds successfully", func() {
 			var err error
-			source, err = occam.Source(filepath.Join("testdata", "java-native-image"))
+			source, err = occam.Source(filepath.Join("testdata", "spring-boot-native-image-maven"))
 			Expect(err).NotTo(HaveOccurred())
 
 			var logs fmt.Stringer
