@@ -4,13 +4,27 @@
       "name": "ubuntu-noble-builder-buildpackless",
       "path": "./builders/builder-buildpackless",
       "container_repository": "ubuntu-noble-builder-buildpackless",
-      "test_runners": ["ubuntu-22.04", "ubuntu-22.04-arm"]
+      "test_runners": ["ubuntu-22.04", "ubuntu-22.04-arm"],
+      "test_data": [{
+        "sample_dir": "procfile/procfile-sample/",
+        "test_dir": "builders/builder-buildpackless/smoke/testdata/procfile"
+      }]
     },
     {
       "name": "ubuntu-noble-builder",
       "path": "./builders/builder",
       "container_repository": "ubuntu-noble-builder",
-      "test_runners": ["ubuntu-22.04", "ubuntu-22.04-arm"]
+      "test_runners": ["ubuntu-22.04", "ubuntu-22.04-arm"],
+      "test_data": [
+        {
+          "sample_dir": "java/native-image/spring-boot-native-image-maven/",
+          "test_dir": "builders/builder-buildpackless/smoke/testdata/java-native-image"
+        },
+        {
+          "sample_dir": "go/go-proc-app/",
+          "test_dir": "builders/builder-buildpackless/smoke/testdata/default_app"
+        }
+      ]
     }
   ]
 }
