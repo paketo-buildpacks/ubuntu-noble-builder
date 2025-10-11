@@ -6,13 +6,13 @@ description = "Ubuntu 24.04 Noble Numbat base image with no buildpacks included.
 [lifecycle]
   version = "0.20.14"
 
-[stack]
-  id = "io.buildpacks.stacks.noble"
-
 [run]
 
- [[run.images]]
+  [[run.images]]
     image = "docker.io/paketobuildpacks/ubuntu-noble-run:latest"
+
+[stack]
+  id = "io.buildpacks.stacks.noble"
 
 [[targets]]
   arch = "amd64"
