@@ -74,7 +74,7 @@ func testProcfile(t *testing.T, context spec.G, it spec.S) {
 			Expect(err).NotTo(HaveOccurred())
 
 			Eventually(container).Should(BeAvailable())
-			Eventually(container).Should(Serve(ContainSubstring("Hello World!")).OnPort(8080).WithEndpoint("/hello-world"))
+			Eventually(container).Should(Serve(ContainSubstring("Hello World!")).OnPort(8080).WithEndpoint("/hello-world.txt"))
 		})
 	})
 }
