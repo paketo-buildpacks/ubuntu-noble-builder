@@ -25,6 +25,10 @@
         {
           "sample_dir": "procfile/procfile-sample",
           "test_dir": "builders/builder/smoke/testdata/procfile"
+        },
+        {
+          "sample_dir": "nodejs/npm",
+          "test_dir": "builders/builder/smoke/testdata/nodejs/npm"
         }
       ]
     }
