@@ -1,4 +1,4 @@
-description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java."
+description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, Node.js and Procfile"
 
 [build]
   image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.34"
@@ -10,6 +10,10 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java."
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/java:20.1.0"
   version = "20.1.0"
+
+[[buildpacks]]
+  uri = "docker://docker.io/paketobuildpacks/nodejs:9.8.1"
+  version = "9.8.1"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.11.3"
@@ -29,6 +33,12 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java."
   [[order.group]]
     id = "paketo-buildpacks/java"
     version = "20.1.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/nodejs"
+    version = "9.8.1"
 
 [[order]]
 
