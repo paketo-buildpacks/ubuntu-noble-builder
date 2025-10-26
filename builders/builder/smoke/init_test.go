@@ -52,6 +52,7 @@ func TestSmoke(t *testing.T) {
 	suite := spec.New("Buildpackless Smoke", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("Java Native Image", testJavaNativeImage)
 	suite("Java", testJava)
+	suite("Node.js", testNodejs)
 	suite("Procfile", testProcfile)
 	suite.Run(t)
 }
