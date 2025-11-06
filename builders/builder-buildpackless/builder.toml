@@ -4,7 +4,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with no buildpacks included.
   image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.38"
 
 [lifecycle]
-  version = "0.20.16"
+  version = "0.20.17"
 
 [run]
 
