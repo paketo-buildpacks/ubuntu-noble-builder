@@ -1,1 +1,4 @@
 .bin/
+
+**/smoke/testdata/dotnet/bin
+**/smoke/testdata/dotnet/obj
