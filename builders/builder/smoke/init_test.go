@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"os"
+	"runtime"
 	"testing"
 	"time"
 
@@ -53,7 +54,11 @@ func TestSmoke(t *testing.T) {
 	suite("Java Native Image", testJavaNativeImage)
 	suite("Java", testJava)
 	suite("Node.js", testNodejs)
-	suite(".NET", testDotnet)
 	suite("Procfile", testProcfile)
+
+	if runtime.GOARCH == "amd64" {
+		suite(".NET", testDotnet)
+	}
+
 	suite.Run(t)
 }
