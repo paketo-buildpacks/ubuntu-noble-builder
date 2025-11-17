@@ -99,6 +99,14 @@ func testWebServers(t *testing.T, context spec.G, it spec.S) {
 			var err error
 			source, err = occam.Source(filepath.Join("testdata", "web-servers", "nginx-sample"))
 			Expect(err).NotTo(HaveOccurred())
+			fmt.Println("Source:", source)
+
+			files, err := os.ReadDir(source)
+			Expect(err).NotTo(HaveOccurred())
+			fmt.Println("Source directory contents:")
+			for _, file := range files {
+				fmt.Println(" -", file.Name())
+			}
 
 			var logs fmt.Stringer
 			image, logs, err = pack.Build.
