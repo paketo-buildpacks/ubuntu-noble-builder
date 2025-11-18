@@ -42,7 +42,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
   [[order.group]]
     id = "paketo-buildpacks/web-servers"
-    version = "3.1.0"
+    version = "3.2.0"
 
 [[order]]
 
