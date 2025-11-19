@@ -23,6 +23,10 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   uri = "docker://docker.io/paketobuildpacks/procfile:5.11.4"
   version = "5.11.4"
 
+[[buildpacks]]
+  uri = "docker://docker.io/paketobuildpacks/web-servers:3.2.0"
+  version = "3.2.0"
+
 [lifecycle]
   version = "0.20.18"
 
@@ -37,6 +41,12 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   [[order.group]]
     id = "paketo-buildpacks/java"
     version = "20.2.1"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/web-servers"
+    version = "3.2.0"
 
 [[order]]
 
