@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"flag"
 	"os"
-	"runtime"
 	"testing"
 	"time"
 
@@ -56,10 +55,7 @@ func TestSmoke(t *testing.T) {
 	suite("Web Servers", testWebServers)
 	suite("Node.js", testNodejs)
 	suite("Procfile", testProcfile)
-
-	if runtime.GOARCH == "amd64" {
-		suite(".NET", testDotnet)
-	}
+	suite(".NET", testDotnet)
 
 	suite.Run(t)
 }
