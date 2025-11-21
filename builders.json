@@ -41,6 +41,14 @@
         {
           "sample_dir": "web-servers/react-frontend-sample",
           "test_dir": "builders/builder/smoke/testdata/web-servers/react-frontend-sample"
+        },
+        {
+          "sample_dir": "web-servers/nginx-sample",
+          "test_dir": "builders/builder/smoke/testdata/web-servers/nginx-sample"
+        },
+        {
+          "sample_dir": "dotnet",
+          "test_dir": "builders/builder/smoke/testdata/dotnet"
         }
       ]
     }
