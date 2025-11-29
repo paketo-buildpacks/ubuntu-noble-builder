@@ -17,7 +17,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/dotnet-core:3.8.0"
-  version = "3.6.0"
+  version = "3.8.0"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.11.4"
