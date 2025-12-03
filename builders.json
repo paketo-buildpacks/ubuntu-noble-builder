@@ -47,7 +47,7 @@
           "test_dir": "builders/builder/smoke/testdata/web-servers/nginx-sample"
         },
         {
-          "sample_dir": "dotnet",
+          "sample_dir": "dotnet-core/runtime",
           "test_dir": "builders/builder/smoke/testdata/dotnet"
         }
       ]
