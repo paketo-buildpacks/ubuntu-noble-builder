@@ -51,7 +51,7 @@ func testDotnet(t *testing.T, context spec.G, it spec.S) {
 
 		it("builds successfully", func() {
 			var err error
-			source, err = occam.Source(filepath.Join("testdata", "dotnet"))
+			source, err = occam.Source(filepath.Join("testdata", "dotnet", "aspnet"))
 			Expect(err).NotTo(HaveOccurred())
 
 			var logs fmt.Stringer
