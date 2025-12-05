@@ -48,7 +48,7 @@
         },
         {
           "sample_dir": "dotnet-core/aspnet",
-          "test_dir": "builders/builder/smoke/testdata/dotnet/aspnet"
+          "test_dir": "builders/builder/smoke/testdata/dotnet-core/aspnet"
         }
       ]
     }
