@@ -16,8 +16,8 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   version = "9.15.2"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/dotnet-core:3.9.0"
-  version = "3.9.0"
+  uri = "docker://docker.io/paketobuildpacks/dotnet-core:3.10.0"
+  version = "3.10.0"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.11.4"
@@ -58,7 +58,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
   [[order.group]]
     id = "paketo-buildpacks/dotnet-core"
-    version = "3.9.0"
+    version = "3.10.0"
 
 [[order]]
 
