@@ -12,20 +12,20 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   version = "20.3.0"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/nodejs:9.15.2"
-  version = "9.15.2"
+  uri = "docker://docker.io/paketobuildpacks/nodejs:9.15.3"
+  version = "9.15.3"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/dotnet-core:3.10.0"
-  version = "3.10.0"
+  uri = "docker://docker.io/paketobuildpacks/dotnet-core:3.10.1"
+  version = "3.10.1"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.11.4"
   version = "5.11.4"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/web-servers:3.3.3"
-  version = "3.3.3"
+  uri = "docker://docker.io/paketobuildpacks/web-servers:3.3.4"
+  version = "3.3.4"
 
 [lifecycle]
   version = "0.20.19"
@@ -46,19 +46,19 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
   [[order.group]]
     id = "paketo-buildpacks/web-servers"
-    version = "3.3.3"
+    version = "3.3.4"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/nodejs"
-    version = "9.15.2"
+    version = "9.15.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/dotnet-core"
-    version = "3.10.0"
+    version = "3.10.1"
 
 [[order]]
 
