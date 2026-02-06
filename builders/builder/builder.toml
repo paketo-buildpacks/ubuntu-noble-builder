@@ -1,7 +1,7 @@
 description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, Node.js, .NET, Nginx, HTTPD and Procfile"
 
 [build]
-  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.51"
+  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.52"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/java-native-image:13.7.0"
