@@ -28,7 +28,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   version = "4.0.3"
 
 [lifecycle]
-  version = "0.21.1"
+  version = "0.21.2"
 
 [[order]]
 
