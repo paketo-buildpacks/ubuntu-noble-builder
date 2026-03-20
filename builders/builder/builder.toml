@@ -1,31 +1,31 @@
 description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, Node.js, .NET, Nginx, HTTPD and Procfile"
 
 [build]
-  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.71"
+  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.72"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/java-native-image:14.2.0"
-  version = "14.2.0"
+  uri = "docker://docker.io/paketobuildpacks/java-native-image:14.3.0"
+  version = "14.3.0"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/java:21.3.0"
-  version = "21.3.0"
+  uri = "docker://docker.io/paketobuildpacks/java:21.4.0"
+  version = "21.4.0"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/nodejs:10.2.1"
-  version = "10.2.1"
+  uri = "docker://docker.io/paketobuildpacks/nodejs:10.2.2"
+  version = "10.2.2"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/dotnet-core:4.2.1"
-  version = "4.2.1"
+  uri = "docker://docker.io/paketobuildpacks/dotnet-core:4.2.2"
+  version = "4.2.2"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.13.1"
   version = "5.13.1"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/web-servers:4.2.1"
-  version = "4.2.1"
+  uri = "docker://docker.io/paketobuildpacks/web-servers:4.2.2"
+  version = "4.2.2"
 
 [lifecycle]
   version = "0.21.6"
@@ -34,31 +34,31 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
   [[order.group]]
     id = "paketo-buildpacks/java-native-image"
-    version = "14.2.0"
+    version = "14.3.0"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/java"
-    version = "21.3.0"
+    version = "21.4.0"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/web-servers"
-    version = "4.2.1"
+    version = "4.2.2"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/nodejs"
-    version = "10.2.1"
+    version = "10.2.2"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/dotnet-core"
-    version = "4.2.1"
+    version = "4.2.2"
 
 [[order]]
 
