@@ -24,8 +24,8 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
   version = "5.13.2"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/web-servers:4.2.8"
-  version = "4.2.8"
+  uri = "docker://docker.io/paketobuildpacks/web-servers:4.2.9"
+  version = "4.2.9"
 
 [lifecycle]
   version = "0.21.8"
@@ -46,7 +46,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Java, No
 
   [[order.group]]
     id = "paketo-buildpacks/web-servers"
-    version = "4.2.8"
+    version = "4.2.9"
 
 [[order]]
 
