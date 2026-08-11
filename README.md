@@ -16,7 +16,7 @@ To see which versions of build and run images and the lifecycle are contained wi
 
 ## `paketobuildpacks/ubuntu-noble-builder`
 
-This builder uses the [Paketo Ubuntu Noble base images](https://github.com/paketo-buildpacks/ubuntu-noble-base-images) with buildpacks for Apache HTTPD, Go, Java, Java Native Image, .NET, NGINX, Node.js, Procfile, and Python.
+This builder uses the [Paketo Ubuntu Noble base images](https://github.com/paketo-buildpacks/ubuntu-noble-base-images) with buildpacks for Apache HTTPD, Go, Java, Java Native Image, .NET, NGINX, Node.js, PHP, Procfile, Python, and Ruby.
 
 For example, with the `pack` CLI, use `--buildpack` as follows:
 

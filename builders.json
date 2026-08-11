@@ -39,6 +39,14 @@
           "test_dir": "builders/builder/smoke/testdata/nodejs/npm"
         },
         {
+          "sample_dir": "php/builtin-server",
+          "test_dir": "builders/builder/smoke/testdata/php"
+        },
+        {
+          "sample_dir": "ruby/puma",
+          "test_dir": "builders/builder/smoke/testdata/ruby"
+        },
+        {
           "sample_dir": "web-servers/httpd-sample",
           "test_dir": "builders/builder/smoke/testdata/web-servers/httpd-sample"
         },
