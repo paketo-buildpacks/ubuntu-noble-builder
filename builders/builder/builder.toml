@@ -4,8 +4,8 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Apache H
   image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.112"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/dotnet-core:4.7.0"
-  version = "4.7.0"
+  uri = "docker://docker.io/paketobuildpacks/dotnet-core:4.7.1"
+  version = "4.7.1"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/go:4.19.23"
@@ -42,7 +42,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Apache H
 
   [[order.group]]
     id = "paketo-buildpacks/dotnet-core"
-    version = "4.7.0"
+    version = "4.7.1"
 
 [[order]]
 
