@@ -44,7 +44,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Apache H
   version = "4.9.0"
 
 [lifecycle]
-  version = "0.21.15"
+  uri = "docker://docker.io/jericop/lifecycle:skip-chown-poc"
 
 [[order]]
 
