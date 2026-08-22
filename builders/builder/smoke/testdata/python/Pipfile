@@ -1,7 +1,7 @@
 [packages]
-Flask = "==3.0.0"
+Flask = "3.1.3"
+Werkzeug = "3.1.8"
 gunicorn = "*"
-itsdangerous = "==2.1.2"
 
 [dev-packages]
 tox = "*"
