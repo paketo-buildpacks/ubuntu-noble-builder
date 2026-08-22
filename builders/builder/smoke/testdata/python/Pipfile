@@ -1,0 +1,10 @@
+[packages]
+Flask = "==3.0.0"
+gunicorn = "*"
+itsdangerous = "==2.1.2"
+
+[dev-packages]
+tox = "*"
+coverage = "*"
+"flake8" = "*"
+flask-testing = "*"
