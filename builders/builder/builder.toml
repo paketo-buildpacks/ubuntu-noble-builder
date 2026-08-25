@@ -1,7 +1,7 @@
 description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Apache HTTPD, Go, Java, Java Native Image, .NET, NGINX, Node.js, PHP, Procfile, Python, and Ruby"
 
 [build]
-  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.117"
+  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.118"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/dotnet-core:4.8.0"
@@ -44,7 +44,7 @@ description = "Ubuntu 24.04 Noble Numbat base image with buildpacks for Apache H
   version = "4.9.1"
 
 [lifecycle]
-  version = "0.21.17"
+  version = "0.21.18"
 
 [[order]]
 
