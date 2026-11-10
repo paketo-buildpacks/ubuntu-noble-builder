@@ -1,23 +1,22 @@
-description = "Ubuntu 24.04 Noble Numbat base image with no buildpacks included. To use, specify buildpacks at build time."
-
-[build]
-  image = "docker.io/paketobuildpacks/ubuntu-noble-build:0.0.157"
+description = 'Ubuntu 24.04 Noble Numbat base image with no buildpacks included. To use, specify buildpacks at build time.'
 
 [lifecycle]
-  version = "0.21.28"
+version = '0.21.28'
+
+[build]
+image = 'docker.io/paketobuildpacks/ubuntu-noble-build:0.0.157'
 
 [run]
-
-  [[run.images]]
-    image = "docker.io/paketobuildpacks/ubuntu-noble-run:latest"
+[[run.images]]
+image = 'docker.io/paketobuildpacks/ubuntu-noble-run:latest'
 
 [stack]
-  id = "io.buildpacks.stacks.noble"
+id = 'io.buildpacks.stacks.noble'
 
 [[targets]]
-  arch = "amd64"
-  os = "linux"
+os = 'linux'
+arch = 'amd64'
 
 [[targets]]
-  arch = "arm64"
-  os = "linux"
+os = 'linux'
+arch = 'arm64'
