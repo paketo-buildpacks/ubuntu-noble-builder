@@ -94,7 +94,7 @@ id = 'paketo-buildpacks/procfile'
 version = '5.15.8'
 
 [build]
-image = 'docker.io/paketobuildpacks/ubuntu-noble-build:0.0.159'
+image = 'docker.io/paketobuildpacks/ubuntu-noble-build:0.0.160'
 
 [run]
 [[run.images]]
